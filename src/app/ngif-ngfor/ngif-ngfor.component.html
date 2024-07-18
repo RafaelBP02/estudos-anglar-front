@@ -1,1 +1,6 @@
-<p>ngif-ngfor works!</p>
+<input type="number" (input)="onInputChange($event)">
+
+<h1 *ngIf="numero === 1"> Este titulo h1 foi exibido!</h1>
+<h1 *ngIf="numero === 2"> Este outro titulo nao será exibido</h1>
+
+<h2 *ngFor="let n of arrNumeros">Uso do ngFor {{n}}</h2>
