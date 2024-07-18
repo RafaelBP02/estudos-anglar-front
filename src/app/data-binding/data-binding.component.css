@@ -1,0 +1,19 @@
+.box-items{
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+}
+
+.box-config{
+  display: flex;
+  width: 30vw;
+
+  flex-direction: column-reverse;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 10px;
+
+  background-color: rgb(201, 201, 201);
+  border-radius: 30px;
+}
+
