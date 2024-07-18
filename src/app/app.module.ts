@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { DataBindingComponent } from './data-binding/data-binding.component';
 import { NgifNgforComponent } from './ngif-ngfor/ngif-ngfor.component';
 import { CrudComponent } from './components/crud/crud.component';
+import { HttpClient } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { CrudComponent } from './components/crud/crud.component';
     AppRoutingModule
   ],
   providers: [
-    provideClientHydration()
+    provideClientHydration(),
+    HttpClient
   ],
   bootstrap: [AppComponent]
 })
