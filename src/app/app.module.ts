@@ -8,13 +8,15 @@ import { NgifNgforComponent } from './components/ngif-ngfor/ngif-ngfor.component
 import { CrudComponent } from './components/crud/crud.component';
 import { HttpClient } from '@angular/common/http';
 import { LazyLoadingModule } from './modules/lazy-loading/lazy-loading.module';
+import { HeaderComponent } from './components/header/header.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DataBindingComponent,
     NgifNgforComponent,
-    CrudComponent
+    CrudComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
