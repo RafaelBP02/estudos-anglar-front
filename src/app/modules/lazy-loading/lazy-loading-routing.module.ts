@@ -1,8 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 import { FooterComponent } from '../../components/footer/footer.component';
 import { HeaderComponent } from '../../components/header/header.component';
 import { HomelazyComponent } from '../../components/homelazy/homelazy.component';
+import { MyformComponent } from '../../components/myform/myform.component';
 
 const routes: Routes = [
   {
@@ -22,8 +25,8 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  declarations:[FooterComponent, HeaderComponent, HomelazyComponent],
-  imports: [RouterModule.forChild(routes)],
+  declarations:[FooterComponent, HeaderComponent, HomelazyComponent,MyformComponent],
+  imports: [RouterModule.forChild(routes), FormsModule, ReactiveFormsModule],
   exports: [RouterModule]
 })
 export class LazyLoadingRoutingModule { }

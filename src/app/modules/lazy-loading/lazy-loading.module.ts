@@ -8,7 +8,7 @@ import { LazyLoadingRoutingModule } from './lazy-loading-routing.module';
   declarations: [],
   imports: [
     CommonModule,
-    LazyLoadingRoutingModule
+    LazyLoadingRoutingModule,
   ]
 })
 export class LazyLoadingModule { }
