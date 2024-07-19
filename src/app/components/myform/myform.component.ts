@@ -8,6 +8,7 @@ import { FormGroup, FormControl } from '@angular/forms';
   styleUrl: './myform.component.css'
 })
 export class MyformComponent {
+  data: any;
   perfil = new FormGroup({
     nome: new FormControl(''),
     sobrenome: new FormControl(''),
@@ -16,4 +17,8 @@ export class MyformComponent {
   });
 
   constructor(){}
+
+  obterDados(){
+    this.data= this.perfil.value;
+  }
 }

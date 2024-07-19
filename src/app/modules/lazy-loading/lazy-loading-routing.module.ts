@@ -27,6 +27,7 @@ const routes: Routes = [
 @NgModule({
   declarations:[FooterComponent, HeaderComponent, HomelazyComponent,MyformComponent],
   imports: [RouterModule.forChild(routes), FormsModule, ReactiveFormsModule],
-  exports: [RouterModule]
+  exports: [RouterModule],
+  providers: [MyformComponent]
 })
 export class LazyLoadingRoutingModule { }

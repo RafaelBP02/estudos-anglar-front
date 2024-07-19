@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule, provideClientHydration } from '@angular/platform-browser';
 import { HttpClient, provideHttpClient } from '@angular/common/http';
+import { CommonModule } from '@angular/common';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -19,6 +20,7 @@ import { CrudService } from './services/crud.service';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    CommonModule,
   ],
   providers: [
     provideClientHydration(),

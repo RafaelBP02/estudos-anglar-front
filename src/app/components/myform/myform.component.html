@@ -3,13 +3,25 @@
   <div>
     <form [formGroup]="perfil">
       <label type="text">Nome:</label>
-      <br>
+      <br/>
+      <input formControlName="nome"  type="text"/>
+      <br/>
       <label type="text">Sobrenome:</label>
-      <br>
+      <br/>
+      <input formControlName="sobrenome" type="text"/>
+      <br/>
       <label type="text">Data de nascimento</label>
       <br>
+      <input formControlName="dataNascimento" type="text"/>
+      <br/>
       <label type="text">Nome da mãe</label>
       <br>
+      <input formControlName="nomeMae" type="text"/>
+      <br/>
     </form>
+    <button (click)="obterDados()">send form</button>
   </div>
+  <pre>
+    {{data}}
+  </pre>
 </div>
