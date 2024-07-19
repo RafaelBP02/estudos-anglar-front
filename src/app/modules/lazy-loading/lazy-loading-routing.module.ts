@@ -5,7 +5,20 @@ import { HeaderComponent } from '../../components/header/header.component';
 import { HomelazyComponent } from '../../components/homelazy/homelazy.component';
 
 const routes: Routes = [
-  { path: '', component: HomelazyComponent } // Defina a rota padrão para o módulo de lazy loading
+  {
+    path: '',
+    component: HomelazyComponent,
+    children: [
+      {
+        path: 'header',
+        component: HeaderComponent,
+      },
+      {
+        path: 'footer',
+        component: FooterComponent,
+      },
+    ]
+  }
 ];
 
 @NgModule({

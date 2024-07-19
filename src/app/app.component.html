@@ -9,28 +9,18 @@
 
 
 <main class="main">
-  <div class="content">
+  <div>
     <div class="left-side">
-      <h1>Hello, {{ title }}</h1>
-      <p>Congratulations! Your app is running. 🎉</p>
+      <p>🎉 Navegador de Componentes 🎉</p>
       <br/>
       <div class="button-box">
-        <button (click)="navigateTo('')">home</button>
+        <!-- <button (click)="navigateTo('')">home</button> -->
+        <button (click)="navigateTo('lazy')">lazy</button>
         <button (click)="navigateTo('primeiro-componente')">databinding</button>
         <button (click)="navigateTo('ng-iffor')">ngiffor</button>
-        <button (click)="navigateTo('lazy')">lazy</button>
         <button (click)="navigateTo('crud')">crud</button>
       </div>
+        <router-outlet />
     </div>
   </div>
 </main>
-
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * The content above * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * * -->
-<!-- * * * * * * * * * * and can be replaced.  * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * End of Placeholder  * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-
-<router-outlet />
