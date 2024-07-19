@@ -2,26 +2,34 @@
   <h2>Preencha o formulário abaixo</h2>
   <div>
     <form [formGroup]="perfil">
-      <label type="text">Nome:</label>
+      <div>
+        <label type="text">Nome:</label>
+        <br/>
+        <input formControlName="nome"  type="text"/>
+      </div>
       <br/>
-      <input formControlName="nome"  type="text"/>
+      <div>
+        <label type="text">Sobrenome:</label>
+        <br/>
+        <input formControlName="sobrenome" type="text"/>
+      </div>
       <br/>
-      <label type="text">Sobrenome:</label>
+      <div>
+        <label type="text">Data de nascimento</label>
+        <br/>
+        <input formControlName="dataNascimento" type="text"/>
+      </div>
       <br/>
-      <input formControlName="sobrenome" type="text"/>
-      <br/>
-      <label type="text">Data de nascimento</label>
-      <br>
-      <input formControlName="dataNascimento" type="text"/>
-      <br/>
-      <label type="text">Nome da mãe</label>
-      <br>
-      <input formControlName="nomeMae" type="text"/>
+      <div>
+        <label type="text">Nome da mãe</label>
+        <br/>
+        <input formControlName="nomeMae" type="text"/>
+      </div>
       <br/>
     </form>
     <button (click)="obterDados()">send form</button>
   </div>
   <pre>
-    {{data}}
+    {{data | json}}
   </pre>
 </div>

@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
 
 import { FooterComponent } from '../../components/footer/footer.component';
 import { HeaderComponent } from '../../components/header/header.component';
@@ -26,7 +27,7 @@ const routes: Routes = [
 
 @NgModule({
   declarations:[FooterComponent, HeaderComponent, HomelazyComponent,MyformComponent],
-  imports: [RouterModule.forChild(routes), FormsModule, ReactiveFormsModule],
+  imports: [RouterModule.forChild(routes), FormsModule, ReactiveFormsModule, CommonModule],
   exports: [RouterModule],
   providers: [MyformComponent]
 })
