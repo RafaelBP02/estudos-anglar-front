@@ -12,23 +12,11 @@ const routes: Routes = [
   {
     path: '',
     component: HomelazyComponent,
-    children: [
-      {
-        path: 'header',
-        component: HeaderComponent,
-      },
-      {
-        path: 'footer',
-        component: FooterComponent,
-      },
-    ],
   },
 ];
 
 @NgModule({
   declarations: [
-    FooterComponent,
-    HeaderComponent,
     HomelazyComponent,
     MyformComponent,
   ],
