@@ -21,14 +21,24 @@ const routes: Routes = [
         path: 'footer',
         component: FooterComponent,
       },
-    ]
-  }
+    ],
+  },
 ];
 
 @NgModule({
-  declarations:[FooterComponent, HeaderComponent, HomelazyComponent,MyformComponent],
-  imports: [RouterModule.forChild(routes), FormsModule, ReactiveFormsModule, CommonModule],
+  declarations: [
+    FooterComponent,
+    HeaderComponent,
+    HomelazyComponent,
+    MyformComponent,
+  ],
+  imports: [
+    RouterModule.forChild(routes),
+    FormsModule,
+    ReactiveFormsModule,
+    CommonModule,
+  ],
   exports: [RouterModule],
-  providers: [MyformComponent]
+  providers: [MyformComponent],
 })
-export class LazyLoadingRoutingModule { }
+export class LazyLoadingRoutingModule {}

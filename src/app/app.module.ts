@@ -9,20 +9,15 @@ import { DataBindingComponent } from './components/data-binding/data-binding.com
 import { NgifNgforComponent } from './components/ngif-ngfor/ngif-ngfor.component';
 import { CrudComponent } from './components/crud/crud.component';
 import { CrudService } from './services/crud.service';
-import { StudyAngularModule } from './modules/study-angular/study-angular.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    DataBindingComponent,
-    NgifNgforComponent,
-    CrudComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     CommonModule,
-    StudyAngularModule,
   ],
   providers: [
     provideClientHydration(),
