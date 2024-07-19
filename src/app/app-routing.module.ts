@@ -6,7 +6,8 @@ import { AppComponent } from './app.component';
 import { CrudComponent } from './components/crud/crud.component';
 
 const routes: Routes = [
-  {path: '', component: AppComponent},
+  {path: 'lazy', loadChildren: () => import('./modules/lazy-loading/lazy-loading.module').then(m => m.LazyLoadingModule)},
+
   {path: 'primeiro-componente', component: DataBindingComponent},
   {path: 'ng-iffor', component: NgifNgforComponent},
   {path: 'crud', component: CrudComponent},

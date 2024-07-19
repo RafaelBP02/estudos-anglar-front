@@ -7,6 +7,7 @@ import { DataBindingComponent } from './components/data-binding/data-binding.com
 import { NgifNgforComponent } from './components/ngif-ngfor/ngif-ngfor.component';
 import { CrudComponent } from './components/crud/crud.component';
 import { HttpClient } from '@angular/common/http';
+import { LazyLoadingModule } from './modules/lazy-loading/lazy-loading.module';
 
 @NgModule({
   declarations: [
@@ -17,11 +18,11 @@ import { HttpClient } from '@angular/common/http';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    LazyLoadingModule
   ],
   providers: [
     provideClientHydration(),
-    HttpClient
   ],
   bootstrap: [AppComponent]
 })
