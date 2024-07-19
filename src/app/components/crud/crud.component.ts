@@ -9,7 +9,7 @@ import { Component } from '@angular/core';
   styleUrl: './crud.component.css'
 })
 export class CrudComponent {
-  images: Images;
+  images: any;
   erro: any;
 
   constructor(private crudService:CrudService){
