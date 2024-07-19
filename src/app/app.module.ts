@@ -6,10 +6,9 @@ import { AppComponent } from './app.component';
 import { DataBindingComponent } from './components/data-binding/data-binding.component';
 import { NgifNgforComponent } from './components/ngif-ngfor/ngif-ngfor.component';
 import { CrudComponent } from './components/crud/crud.component';
-import { HttpClient } from '@angular/common/http';
 import { LazyLoadingModule } from './modules/lazy-loading/lazy-loading.module';
-import { HeaderComponent } from './components/header/header.component';
-import { FooterComponent } from './components/footer/footer.component';
+import { HttpClient, provideHttpClient } from '@angular/common/http';
+import { CrudService } from './services/crud.service';
 
 @NgModule({
   declarations: [
@@ -17,16 +16,17 @@ import { FooterComponent } from './components/footer/footer.component';
     DataBindingComponent,
     NgifNgforComponent,
     CrudComponent,
-    HeaderComponent,
-    FooterComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    LazyLoadingModule
+    LazyLoadingModule,
   ],
   providers: [
     provideClientHydration(),
+    provideHttpClient(), // HttpClientModule foi "depreciado" no Angular 18, esta é a nova solução
+    CrudService,
+    HttpClient,
   ],
   bootstrap: [AppComponent]
 })
