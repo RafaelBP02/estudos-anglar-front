@@ -21,7 +21,11 @@
       </div>
       <br/>
     </form>
-    <button class="btn btn-primary" (click)="obterDados()">send form</button>
+    <button
+      class="btn btn-primary"
+      (click)="obterDados()"
+      *ngIf="btnCadastro"
+      >send form</button>
   </div>
   <pre>
     {{data | json}}

@@ -8,6 +8,9 @@ import { FormGroup, FormControl } from '@angular/forms';
   styleUrl: './myform.component.css'
 })
 export class MyformComponent {
+
+  btnCadastro: boolean = true;
+
   data: any;
   perfil = new FormGroup({
     nome: new FormControl(''),
