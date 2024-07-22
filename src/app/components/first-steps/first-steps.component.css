@@ -1,0 +1,16 @@
+.options-box{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.options-button a{
+  background-color: rgb(34, 34, 34);
+  border-color: black;
+  color: white;
+
+  text-decoration: none;
+  padding: 4px;
+  border-radius: 15px;
+}
