@@ -1,0 +1,43 @@
+figure.icon{
+  padding: 5px;
+  margin: 0;
+  margin-right: 30px;
+}
+
+img.icon{
+  background-color: white;
+  padding: 5px;
+  width: 40px;
+  height: auto;
+  border-radius: 20px;
+}
+
+.header-box{
+  height: 12vh;
+  background-color: rgb(97, 97, 192);
+  display: flex;
+  align-items: center;
+  gap: 2%;
+  margin: 0;
+}
+
+.header-button a{
+  display: flex;
+  align-items: center;
+  padding-left: 5px;
+  padding-right: 5px;
+
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+  font-size: 110%;
+  height: 12vh;
+
+}
+.header-button:hover a{
+  background-color: rgb(76, 76, 153);
+  cursor: pointer;
+
+  color: white;
+}
