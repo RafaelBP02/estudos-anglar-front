@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 
 import { FormGroup, FormControl } from '@angular/forms';
+import { Client } from '../../models/Client';
+import { ClientService } from '../../services/client.service';
 
 @Component({
   selector: 'app-myform',
@@ -18,9 +20,17 @@ export class MyformComponent {
     cidade: new FormControl(''),
   });
 
-  constructor(){}
+  clients:Client[]= [];
 
-  obterDados(){
+  constructor(private service:ClientService){}
+
+
+  selectClient():void{
+    this.service.selectClients()
+    .subscribe(c => this.clients = c);
+  }
+
+  obterDados():void{
     this.data= this.perfil.value;
   }
 }
