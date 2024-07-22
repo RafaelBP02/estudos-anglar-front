@@ -5,29 +5,23 @@
       <div>
         <label type="text">Nome:</label>
         <br/>
-        <input formControlName="nome"  type="text"/>
+        <input class="form-control" formControlName="nome"  type="text"/>
       </div>
       <br/>
       <div>
-        <label type="text">Sobrenome:</label>
+        <label type="text">Idade:</label>
         <br/>
-        <input formControlName="sobrenome" type="text"/>
+        <input class="form-control" formControlName="idade" type="text"/>
       </div>
       <br/>
       <div>
-        <label type="text">Data de nascimento</label>
+        <label type="text">Cidade</label>
         <br/>
-        <input formControlName="dataNascimento" type="text"/>
-      </div>
-      <br/>
-      <div>
-        <label type="text">Nome da mãe</label>
-        <br/>
-        <input formControlName="nomeMae" type="text"/>
+        <input class="form-control" formControlName="cidade" type="text"/>
       </div>
       <br/>
     </form>
-    <button (click)="obterDados()">send form</button>
+    <button class="btn btn-primary" (click)="obterDados()">send form</button>
   </div>
   <pre>
     {{data | json}}

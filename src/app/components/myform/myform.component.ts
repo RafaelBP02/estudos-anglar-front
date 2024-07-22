@@ -11,9 +11,8 @@ export class MyformComponent {
   data: any;
   perfil = new FormGroup({
     nome: new FormControl(''),
-    sobrenome: new FormControl(''),
-    dataNascimento: new FormControl(''),
-    nomeMae: new FormControl(''),
+    idade: new FormControl(''),
+    cidade: new FormControl(''),
   });
 
   constructor(){}
