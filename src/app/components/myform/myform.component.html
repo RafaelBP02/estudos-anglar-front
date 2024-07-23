@@ -42,7 +42,7 @@
     <button
       class="btn btn-primary"
       (click)="registerClient()"
-      *ngIf="btnCadastro"
+      *ngIf="showBtn"
     >
       send form
     </button>
@@ -50,7 +50,7 @@
   <br />
 
   <h2>Clientes Cadastrados</h2>
-  <table class="table">
+  <table class="table" *ngIf="showTable">
     <thead>
       <tr>
         <th>#</th>

@@ -11,7 +11,8 @@ import { ClientService } from '../../services/client.service';
 })
 export class MyformComponent {
 
-  btnCadastro: boolean = true;
+  showBtn: boolean = true;
+  showTable: boolean = true;
 
   data: any;
   perfil = new FormGroup({
@@ -26,10 +27,12 @@ export class MyformComponent {
   constructor(private service:ClientService){}
 
 
-  selectClient():void{
+  selectAllClient():void{
     this.service.selectClients()
     .subscribe(c => this.clients = c);
   }
+
+
 
   registerClient():void{
     this.service.registerClient(this.formData)
@@ -47,6 +50,6 @@ export class MyformComponent {
   }
 
   ngOnInit(){
-    this.selectClient();
+    this.selectAllClient();
   }
 }
