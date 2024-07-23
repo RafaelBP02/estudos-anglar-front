@@ -67,6 +67,11 @@ export class MyformComponent {
     });
   }
 
+  cancelOperation():void{
+    this.showBtn = true;
+    this.showTable = true;
+  }
+
   obterDados():void{
     this.data= this.perfil.value;
   }
