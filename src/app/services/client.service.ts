@@ -16,4 +16,8 @@ export class ClientService {
   selectClients():Observable<Client[]>{
     return this.http.get<Client[]>(this.url);
   }
+
+  registerClient(clientData:Client):Observable<Client>{
+    return this.http.post<Client>(this.url, clientData);
+  }
 }
