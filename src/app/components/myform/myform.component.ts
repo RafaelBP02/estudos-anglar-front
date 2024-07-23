@@ -33,4 +33,8 @@ export class MyformComponent {
   obterDados():void{
     this.data= this.perfil.value;
   }
+
+  ngOnInit(){
+    this.selectClient();
+  }
 }

@@ -42,6 +42,14 @@
       </tr>
     </thead>
 
-    <tbody></tbody>
+    <tbody>
+      <tr *ngFor="let c of clients">
+        <td></td>
+        <td>{{c.nome}}</td>
+        <td>{{c.idade}}</td>
+        <td>{{c.cidade}}</td>
+        <td><button class="btn btn-success">select</button></td>
+      </tr>
+    </tbody>
   </table>
 </div>
