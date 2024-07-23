@@ -48,7 +48,7 @@
         send form
       </button>
       <button class="btn btn-success" (click)="editClient()" *ngIf="!showBtn">Save</button>
-      <button class="btn btn-danger" *ngIf="!showBtn">Delete</button>
+      <button class="btn btn-danger" (click)="deleteClient()" *ngIf="!showBtn">Delete</button>
       <button class="btn btn-secondary" (click)="cancelOperation()" *ngIf="!showBtn">Cancel</button>
     </div>
   </div>

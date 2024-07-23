@@ -3,6 +3,7 @@ import { Component } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
 import { Client } from '../../models/Client';
 import { ClientService } from '../../services/client.service';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-myform',
@@ -56,6 +57,25 @@ export class MyformComponent {
     });
   }
 
+  deleteClient():void{
+    this.service.deleteClient(this.formData.codigo)
+    .subscribe(ed => {
+      let pos = this.clients.findIndex(obj =>{
+        return obj.codigo == this.formData.codigo;
+      });
+
+      this.clients.splice(pos, 1);
+
+      this.formData = new Client();
+
+      this.showBtn = true;
+      this.showTable = true;
+
+      alert('cliente removido com sucesso');
+
+    });
+  }
+
   registerClient():void{
     this.service.registerClient(this.formData)
     .subscribe(fd => {
@@ -66,6 +86,7 @@ export class MyformComponent {
       alert('Cliente cadastrado com sucesso')
     });
   }
+
 
   cancelOperation():void{
     this.showBtn = true;
