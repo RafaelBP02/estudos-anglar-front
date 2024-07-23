@@ -21,6 +21,7 @@ export class MyformComponent {
   });
 
   clients:Client[]= [];
+  formData = new Client();
 
   constructor(private service:ClientService){}
 

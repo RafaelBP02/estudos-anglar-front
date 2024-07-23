@@ -4,33 +4,50 @@
     <form [formGroup]="perfil">
       <div>
         <label type="text">Nome:</label>
-        <br/>
-        <input class="form-control" formControlName="nome"  type="text"/>
+        <br />
+        <input
+          class="form-control"
+          formControlName="nome"
+          type="text"
+          name="nome"
+          [(ngModel)]="formData.nome"
+        />
       </div>
-      <br/>
+      <br />
       <div>
         <label type="text">Idade:</label>
-        <br/>
-        <input class="form-control" formControlName="idade" type="text"/>
+        <br />
+        <input
+          class="form-control"
+           formControlName="idade"
+           type="number"
+           name="idade"
+          [(ngModel)]="formData.idade"
+           />
       </div>
-      <br/>
+      <br />
       <div>
         <label type="text">Cidade</label>
-        <br/>
-        <input class="form-control" formControlName="cidade" type="text"/>
+        <br />
+        <input
+          class="form-control"
+          formControlName="cidade"
+          type="text"
+          name="cidade"
+          [(ngModel)]="formData.cidade"
+          />
       </div>
-      <br/>
+      <br />
     </form>
-    <button
-      class="btn btn-primary"
-      (click)="obterDados()"
-      *ngIf="btnCadastro"
-      >send form</button>
+    <button class="btn btn-primary" (click)="obterDados()" *ngIf="btnCadastro">
+      send form
+    </button>
   </div>
   <pre>
-    {{data | json}}
+    {{ data | json }}
   </pre>
 
+  <p>{{ formData | json }}</p>
   <table class="table">
     <thead>
       <tr>
@@ -44,10 +61,10 @@
 
     <tbody>
       <tr *ngFor="let c of clients; index as i">
-        <td>{{i+1}}</td>
-        <td>{{c.nome}}</td>
-        <td>{{c.idade}}</td>
-        <td>{{c.cidade}}</td>
+        <td>{{ i + 1 }}</td>
+        <td>{{ c.nome }}</td>
+        <td>{{ c.idade }}</td>
+        <td>{{ c.cidade }}</td>
         <td><button class="btn btn-success">select</button></td>
       </tr>
     </tbody>
