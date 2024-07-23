@@ -89,6 +89,8 @@ export class MyformComponent {
 
 
   cancelOperation():void{
+    this.formData = new Client();
+
     this.showBtn = true;
     this.showTable = true;
   }
