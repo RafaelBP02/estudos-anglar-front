@@ -31,6 +31,11 @@ export class MyformComponent {
     .subscribe(c => this.clients = c);
   }
 
+  registerClient():void{
+    this.service.registerClient(this.formData)
+    .subscribe(fd => {this.clients.push(fd);});
+  }
+
   obterDados():void{
     this.data= this.perfil.value;
   }

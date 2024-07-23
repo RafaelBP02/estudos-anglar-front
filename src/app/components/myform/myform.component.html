@@ -19,11 +19,11 @@
         <br />
         <input
           class="form-control"
-           formControlName="idade"
-           type="number"
-           name="idade"
+          formControlName="idade"
+          type="number"
+          name="idade"
           [(ngModel)]="formData.idade"
-           />
+        />
       </div>
       <br />
       <div>
@@ -35,19 +35,21 @@
           type="text"
           name="cidade"
           [(ngModel)]="formData.cidade"
-          />
+        />
       </div>
       <br />
     </form>
-    <button class="btn btn-primary" (click)="obterDados()" *ngIf="btnCadastro">
+    <button
+      class="btn btn-primary"
+      (click)="registerClient()"
+      *ngIf="btnCadastro"
+    >
       send form
     </button>
   </div>
-  <pre>
-    {{ data | json }}
-  </pre>
+  <br />
 
-  <p>{{ formData | json }}</p>
+  <h2>Clientes Cadastrados</h2>
   <table class="table">
     <thead>
       <tr>
