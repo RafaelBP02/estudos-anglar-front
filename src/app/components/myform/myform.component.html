@@ -43,8 +43,8 @@
     </thead>
 
     <tbody>
-      <tr *ngFor="let c of clients">
-        <td></td>
+      <tr *ngFor="let c of clients; index as i">
+        <td>{{i+1}}</td>
         <td>{{c.nome}}</td>
         <td>{{c.idade}}</td>
         <td>{{c.cidade}}</td>
