@@ -33,7 +33,13 @@ export class MyformComponent {
 
   registerClient():void{
     this.service.registerClient(this.formData)
-    .subscribe(fd => {this.clients.push(fd);});
+    .subscribe(fd => {
+      this.clients.push(fd);
+
+      this.formData = new Client();
+
+      alert('Cliente cadastrado com sucesso')
+    });
   }
 
   obterDados():void{
