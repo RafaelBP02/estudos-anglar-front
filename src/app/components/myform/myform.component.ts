@@ -27,7 +27,7 @@ export class MyformComponent {
   constructor(private service:ClientService){}
 
 
-  selectAllClient():void{
+  selectAllClients():void{
     this.service.selectClients()
     .subscribe(c => this.clients = c);
   }
@@ -37,7 +37,23 @@ export class MyformComponent {
 
     this.showBtn = false;
     this.showTable = false;
+  }
 
+  editClient():void{
+    this.service.editClient(this.formData)
+    .subscribe(ed => {
+      let pos = this.clients.findIndex(obj =>{
+        return obj.codigo ==  ed.codigo;
+      });
+
+      this.clients[pos] = ed;
+
+      this.showBtn = true;
+      this.showTable = true;
+
+      alert('cliente alterado com sucesso');
+
+    });
   }
 
   registerClient():void{
@@ -56,6 +72,6 @@ export class MyformComponent {
   }
 
   ngOnInit(){
-    this.selectAllClient();
+    this.selectAllClients();
   }
 }

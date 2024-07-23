@@ -47,7 +47,7 @@
       >
         send form
       </button>
-      <button class="btn btn-warning" *ngIf="!showBtn">Edit</button>
+      <button class="btn btn-warning" (click)="editClient()" *ngIf="!showBtn">Edit</button>
       <button class="btn btn-danger" *ngIf="!showBtn">Delete</button>
       <button class="btn btn-secondary" *ngIf="!showBtn">Cancel</button>
     </div>
