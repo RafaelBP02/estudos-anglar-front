@@ -15,13 +15,6 @@ export class MyformComponent {
   showBtn: boolean = true;
   showTable: boolean = true;
 
-  data: any;
-  perfil = new FormGroup({
-    nome: new FormControl(''),
-    idade: new FormControl(''),
-    cidade: new FormControl(''),
-  });
-
   clients:Client[]= [];
   formData = new Client();
 
@@ -93,10 +86,6 @@ export class MyformComponent {
 
     this.showBtn = true;
     this.showTable = true;
-  }
-
-  obterDados():void{
-    this.data= this.perfil.value;
   }
 
   ngOnInit(){

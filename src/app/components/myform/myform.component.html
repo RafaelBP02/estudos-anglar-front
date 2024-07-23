@@ -1,13 +1,12 @@
 <div>
   <h2>Preencha o formulário abaixo</h2>
   <div>
-    <form [formGroup]="perfil">
+    <form >
       <div>
         <label type="text">Nome:</label>
         <br />
         <input
           class="form-control"
-          formControlName="nome"
           type="text"
           name="nome"
           [(ngModel)]="formData.nome"
@@ -19,7 +18,6 @@
         <br />
         <input
           class="form-control"
-          formControlName="idade"
           type="number"
           name="idade"
           [(ngModel)]="formData.idade"
@@ -31,7 +29,6 @@
         <br />
         <input
           class="form-control"
-          formControlName="cidade"
           type="text"
           name="cidade"
           [(ngModel)]="formData.cidade"
