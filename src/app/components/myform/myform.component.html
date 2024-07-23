@@ -39,13 +39,18 @@
       </div>
       <br />
     </form>
-    <button
-      class="btn btn-primary"
-      (click)="registerClient()"
-      *ngIf="showBtn"
-    >
-      send form
-    </button>
+    <div class="form-buttons">
+      <button
+        class="btn btn-primary"
+        (click)="registerClient()"
+        *ngIf="showBtn"
+      >
+        send form
+      </button>
+      <button class="btn btn-warning" *ngIf="!showBtn">Edit</button>
+      <button class="btn btn-danger" *ngIf="!showBtn">Delete</button>
+      <button class="btn btn-secondary" *ngIf="!showBtn">Cancel</button>
+    </div>
   </div>
   <br />
 
@@ -67,7 +72,11 @@
         <td>{{ c.nome }}</td>
         <td>{{ c.idade }}</td>
         <td>{{ c.cidade }}</td>
-        <td><button class="btn btn-success">select</button></td>
+        <td>
+          <button class="btn btn-success" (click)="selectClient(i)">
+            select
+          </button>
+        </td>
       </tr>
     </tbody>
   </table>

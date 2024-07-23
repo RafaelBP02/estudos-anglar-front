@@ -32,7 +32,13 @@ export class MyformComponent {
     .subscribe(c => this.clients = c);
   }
 
+  selectClient(pos:number):void{
+    this.formData = this.clients[pos];
 
+    this.showBtn = false;
+    this.showTable = false;
+
+  }
 
   registerClient():void{
     this.service.registerClient(this.formData)
